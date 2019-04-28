@@ -1,41 +1,92 @@
+
+
+<!-- just so I don't forget: RUN 'firebase deploy' TO BUILD APP -->
+
+
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab One
+      I'm Judd.
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-card class="welcome-card">
-      <ion-img src="/assets/shapes.svg"></ion-img>
-      <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
-      </ion-card-content>
-    </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>Resources</ion-label>
-      </ion-list-header>
-      <ion-item href="https://ionicframework.com/docs/">
-        <ion-icon slot="start" color="medium" name="book"></ion-icon>
-        <ion-label>Ionic Documentation</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-        <ion-icon slot="start" color="medium" name="build"></ion-icon>
-        <ion-label>Scaffold Out Your App</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/layout/structure">
-        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-        <ion-label>Change Your App Layout</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/theming/basics">
-        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-        <ion-label>Theme Your App</ion-label>
-      </ion-item>
-    </ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card (click)='about()' class='detail-card'>
+          <ion-img src="/assets/me3.jpg"></ion-img>
+          <ion-card-header>
+            <ion-card-subtitle>Talking about yourself is hard...</ion-card-subtitle>
+            <ion-card-title>About Me!</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+
+        <ion-card class='detail-card'>
+          <ion-card-header>
+            <ion-card-title>Keep in Mind...</ion-card-title>
+            <ion-card-subtitle>there are some people that do even more clubs and sports than me</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-list class='clubs'>
+              <ion-list-header>
+                <h1>Clubs</h1>
+              </ion-list-header>
+              <ion-item detail no-padding>
+                <ion-label text-wrap>Samsung Solve For Tomorrow (SFT)</ion-label>
+                <ion-button slot='end' fill='outline' href='https://www.samsung.com/us/solvefortomorrow/'>website</ion-button>
+              </ion-item>
+              <ion-item detail no-padding>
+                <ion-label>Science Olympiad</ion-label>
+                <ion-button slot='end' fill='outline' href='https://www.soinc.org/'>website</ion-button>
+              </ion-item>
+              <ion-item detail no-padding>
+                <ion-label text-wrap>Future Problem Solvers (FPS)</ion-label>
+                <ion-button slot='end' fill='outline' href='https://www.soinc.org/'>website</ion-button>
+              </ion-item>
+              <ion-item detail no-padding>
+                <ion-label>NJHS</ion-label>
+                <ion-button slot='end' fill='outline' href='https://www.njhs.us/'>website</ion-button>
+              </ion-item>
+
+              <ion-item detail no-padding>
+                <ion-label>Drama Club</ion-label>
+              </ion-item>
+              <ion-item detail no-padding lines='none'>
+                <ion-label>WEB</ion-label>
+              </ion-item>
+            </ion-list>
+
+              <ion-item-divider style="color: black;"></ion-item-divider>
+              <!-- <ion-item-header>
+                <h1>Baseball</h1>
+              </ion-item-header> -->
+
+            <!-- <ion-button id='baseball' fill='outline' expand='block' href>Baseball</ion-button> -->
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col>
+        <ion-card (click)='photos()' class='detail-card'>
+          <ion-img src="/assets/Judd-batting.jpg"></ion-img>
+          <ion-card-header>
+            <ion-card-title>Photos</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Awards</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <h1>Challenge Coin</h1>
+            <ion-item no-padding lines='none'>
+              <ion-img id='coin' src='/assets/challenge-coin.jpg' style='height: 80%'></ion-img>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

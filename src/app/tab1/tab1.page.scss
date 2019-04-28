@@ -1,4 +1,29 @@
-.welcome-card ion-img {
-  max-height: 35vh;
-  overflow: hidden;
+@function get-vw($target) {
+  $vw-context: (1000*.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+
+// .detail-card {
+//   $breakpoint-tablet: 768px;
+//   @media (min-width: $breakpoint-tablet) {
+//     width: 47%;
+//     float: left;
+//   }
+// }
+
+.clubs {
+  ion-label {
+    font-size: 13px;
+  }
+}
+
+#baseball {
+  height: 10vh;
+  font-size: 20px;
+}
+
+#coin {
+  ion-card-content{
+    padding: 0px !important;
+  }
 }
