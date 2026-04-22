@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="center-container">
+    <div class="large-emoji" (click)="next()">{{ randomEmoji }}</div>
+
+  </div>
+
+  <div class="button-container">
+    <!-- Filled Button -->
+    <ion-button (click)="isRusty()">I'm Rusty</ion-button>
+
+    <ion-button fill="outline" (click)="notRusty()">I'm Not Rusty</ion-button>
+
+    <!-- Outline Button -->
+    <!-- <ion-button fill="outline" (click)="navigateToPage2()">I'm Not Rusty</ion-button> -->
+  </div>
+
+</ion-content>

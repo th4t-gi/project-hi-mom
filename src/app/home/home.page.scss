@@ -1,0 +1,17 @@
+ion-content {
+  --background: none transparent;  // To make the ion-content transparent
+}
+
+.button-container {
+  position: absolute;
+  bottom: 10px;  // Position it 10px from the bottom
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+ion-button {
+  display: inline-block;
+  width: 30%;
+  margin: 10px 5px;  // This will give a little space between the buttons
+}

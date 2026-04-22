@@ -1,0 +1,24 @@
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.large-emoji {
+  font-size: 15rem;  // Adjust this value to your preference
+}
+
+.button-container {
+  position: absolute;
+  bottom: 10px;  // Position it 10px from the bottom
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+ion-button {
+  display: inline-block;
+  width: 30%;
+  margin: 10px 5px;  // This will give a little space between the buttons
+}
