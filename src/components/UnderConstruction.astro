@@ -1,0 +1,17 @@
+---
+const phrases = [
+  "Still hammering things together...",
+  "Pardon the dust — work in progress.",
+  "This page is being built as we speak.",
+  "Under construction. Check back soon!",
+  "Not quite ready yet — stay tuned.",
+  "Hard hats required beyond this point.",
+];
+
+const phrase = phrases[Math.floor(Math.random() * phrases.length)];
+---
+
+<div class="border border-border rounded-lg p-10 text-center max-w-xl mx-auto mt-12">
+  <div class="text-8xl mb-8">🚧</div>
+  <p class="text-text-muted text-xl">{phrase}</p>
+</div>
