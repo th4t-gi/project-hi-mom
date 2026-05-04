@@ -1,0 +1,74 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { competencies } from "../../data/competencies";
+
+const mdxFiles = import.meta.glob("../../content/competencies/*.mdx", {
+  eager: true,
+});
+
+export function getStaticPaths() {
+  return competencies.map(({ slug }) => ({
+    params: { slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const { name, topic, topic_code, section, description, status } = competencies.find(
+  (c) => c.slug === slug,
+)!;
+
+const mdxKey = Object.keys(mdxFiles).find((k) => k.endsWith(`/${slug}.mdx`));
+const mdxModule = mdxKey ? (mdxFiles[mdxKey] as any) : null;
+const Content = mdxModule?.Content;
+---
+
+<BaseLayout title={name}>
+  <div class="mx-auto max-w-3xl">
+    <a
+      href="/competencies"
+      class="text-accent hover:underline text-sm mb-6 inline-block"
+    >
+      &larr; All Competencies
+    </a>
+
+    <p class="text-text-muted text-sm uppercase tracking-wide mb-2">
+      {section}
+    </p>
+    {
+      topic ? (
+        <h1 class="text-4xl font-bold text-text mb-4">
+          {name} -{" "}
+          {topic_code ? (
+            <code class="text-3xl text-accent">{topic}</code>
+          ) : (
+            <span class="text-3xl text-accent">{topic}</span>
+          )}
+        </h1>
+      ) : (
+        <h1 class="text-4xl font-bold text-text mb-4">{name}</h1>
+      )
+    }
+    <!-- <p class="text-text-muted leading-relaxed mb-10 max-w-3xl">{description}</p> -->
+
+    {
+      Content && (
+        <div
+          class="prose prose-invert max-w-3xl
+      [&_h3]:text-xl [&_h3]:font-semibold [&_h3]:text-text [&_h3]:mt-8 [&_h3]:mb-3
+      [&_p]:text-text-muted [&_p]:leading-relaxed
+      [&_code]:text-accent [&_code]:bg-surface [&_code]:px-1.5 [&_code]:py-0.5 [&_code]:rounded
+      [&_pre]:bg-surface [&_pre]:rounded-lg [&_pre]:p-4 [&_pre]:overflow-x-auto
+      [&_pre_code]:bg-transparent [&_pre_code]:p-0
+      [&_img]:rounded-lg [&_img]:my-4
+      [&_strong]:text-text [&_strong]:font-semibold
+      [&_a]:text-accent [&_a]:underline
+      [&_ul]:text-text-muted [&_ul]:list-disc [&_ul]:pl-6
+      [&_ol]:text-text-muted [&_ol]:list-decimal [&_ol]:pl-6
+      [&_li]:mb-1"
+        >
+          <Content competencyStatus={status} />
+        </div>
+      )
+    }
+  </div>
+</BaseLayout>

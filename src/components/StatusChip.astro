@@ -1,0 +1,19 @@
+---
+import type { Competency } from "../data/competencies";
+
+interface Props {
+  status: Competency["status"];
+  class?: string;
+}
+
+const { status, class: className = "" } = Astro.props;
+
+const statusStyles: Record<Competency["status"], string> = {
+  "Completed": "bg-green-300 text-green-800",
+  "Approved For": "bg-blue-200 text-blue-800",
+  "Needs Review": "bg-yellow-200 text-yellow-800",
+  "TODO": "bg-red-300 text-red-800",
+};
+---
+
+<span class={`text-xs font-medium px-2 py-0.5 rounded-full w-fit ${statusStyles[status]} ${className}`}>{status}</span>

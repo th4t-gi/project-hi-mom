@@ -4,6 +4,7 @@ import fs from 'fs';
 import path from 'path';
 
 import react from '@astrojs/react';
+import mdx from '@astrojs/mdx';
 import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
@@ -27,5 +28,5 @@ export default defineConfig({
     }, tailwindcss()],
   },
 
-  integrations: [react()],
+  integrations: [react(), mdx()],
 });

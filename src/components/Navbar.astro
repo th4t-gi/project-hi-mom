@@ -8,6 +8,7 @@ const links = [
   { href: '/about', label: 'About' },
   { href: '#', label: 'CV' },
   { href: '/projects', label: 'Projects' },
+  { href: '/competencies', label: 'Competencies' },
 ];
 ---
 
@@ -23,7 +24,7 @@ const links = [
       href={href}
       class:list={[
         'text-sm font-medium tracking-wide uppercase no-underline transition-colors',
-        currentPath === href || currentPath === href + '/'
+        currentPath === href || currentPath === href + '/' || (href !== '/' && currentPath.startsWith(href))
           ? 'text-accent'
           : 'text-text-muted hover:text-text',
       ]}

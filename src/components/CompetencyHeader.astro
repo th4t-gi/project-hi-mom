@@ -1,0 +1,31 @@
+---
+import type { Competency } from "../data/competencies";
+import StatusChip from "./StatusChip.astro";
+
+interface Props {
+  status: Competency["status"];
+  contribution?: string;
+}
+
+const { status, contribution = "" } = Astro.props;
+const labelClassName = "font-semibold text-text whitespace-nowrap m-0!"
+---
+
+<div class="grid grid-cols-[auto_1fr] items-baseline gap-x-12 gap-y-4 mb-8 ml-8">
+  <h3 class={labelClassName}>Status:</h3>
+  <StatusChip status={status} />
+
+  <h3 class={labelClassName}>Sample:</h3>
+  <div>
+    <slot name="sample">
+      <p class="text-text-muted">No sample provided</p>
+    </slot>
+  </div>
+
+  {contribution && (
+    <>
+      <h3 class={labelClassName}>My Contribution:</h3>
+      <p class="text-text-muted leading-relaxed">{contribution}</p>
+    </>
+  )}
+</div>

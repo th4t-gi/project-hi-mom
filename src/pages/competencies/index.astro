@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { competencies, sections } from '../../data/competencies';
+import StatusChip from '../../components/StatusChip.astro';
+---
+
+<BaseLayout title="Competencies">
+  <h1 class="text-4xl font-bold text-text mb-10">Competencies</h1>
+
+  {sections.map((section) => {
+    const items = competencies.filter((c) => c.section === section);
+    return (
+      <section class="mb-12">
+        <h2 class="text-2xl font-semibold text-text mb-6">{section}</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {items.map((c) => (
+            <a
+              href={`/competencies/${c.slug}`}
+              class="relative block border border-border rounded-lg p-6 hover:border-accent hover:bg-surface transition-colors no-underline"
+            >
+              <StatusChip status={c.status} class="absolute top-3 right-3" />
+              <h3 class="text-lg font-semibold text-text mb-2">{c.name}</h3>
+              <p class="text-text-muted text-sm">{c.topic || (<span class="text-border">{c.description}</span>)}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+    );
+  })}
+
+  <div class="bg-surface w-lvw absolute left-0 min-h-24 p-6"> 
+    <div class="max-w-4xl mx-auto">
+      <h3 class="text-xl font-semibold pb-2">Acknowledgement of AI use</h3>
+      <p class="italic">
+        I did use Claude Code to expedite the development of the UI and layout, but 100% of the content in each .MDX file (i.e. the competencies) found in <code class="text-accent bg-surface px-1.5 p-1 rounded-md">src/content/competencies/*.mdx</code> is written by me.
+      </p>
+      
+    </div>
+  </div>
+</BaseLayout>
