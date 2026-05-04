@@ -1,0 +1,50 @@
+1. .
+
+2. We are going to build out a portfolio website with astro and react and d3.js. below are the pages we are going to make. Write a /plan for implementing these pages, don't worry about style for right now other than it should be a gentle darkmode site with a sanserif font and the option to change to light mode.
+    1. A home page with a hero component that will be built out later, and a topbar right justified common to all pages with links to the pages "about", "CV", and "projects". below the hero component should be a preview of the about page, and then preview of the projects page
+    2. About page with my name in large font on the left-center with icons for socials below it, a space for a vertical image on the right-center and 3 lorem ipsem paragraphs below that
+    3. Project page which has a wireframe list with a project title, brief description and list of technologies, and screenshots
+
+3. yes, only change i will make to the plan is to use tailwind for css
+
+4. below the hero card and on the about and project pages, put a soft outlined card with a large constrution emoji and underneath it has one of 6 different phrases that are all under the theme "this is under construction"
+
+5. Next, make a page /competencies that follows the structure of the file ./src/competencies/assignment.md:
+- there are 5 headers (aka sections) on the main /compentencies page corresponding each to the sections in assignment.md, then under each header is a css-grid (2 columns) of cards with the title being the name of the competency, and then a brief description that for right now should just read "Lorem Ipsem".
+- now for each of these competencies, they should have their own page at path /competencies/<name> with a Title of the name, the description of the competency below, and then h3s ish with the questions that are asked for each competency. *DO NOT WRITE ANY TEXT FOR THE QUESTIONS*, just put a paragraph under the h3 with "Lorem Ipsem."
+
+6. I added two advanced competencies to @src/competencies/assignment.md . add them to the layout
+
+7. help me brainstorm for this, Under each question in @src/data/competencies.ts I will want to have a markup section with code snippets, bold, and images breaking the text, how can I easily write these somewhere while also have this scale to the structure of the data we have right now?
+
+8. yes scaffold the mdx files with the questions but don't write anything else
+
+9. is there a way to use inline code blocks inside the index.astro component?
+
+10. the competencies pages are not updating when changing the data of that competency (in src/data/competencies.ts)
+
+11. it does change when I restart the dev server, but not on save refresh
+
+12. yes! that works, can you get rid of the changes in astro.config.mjs
+
+13. can you extract all prompts that I gave in this conversation into one text file?
+
+14. is there a way to use markdown inline code inside index.astro?
+
+15. add a badge to the top right of every card with c.status corresponding to the colors red for todo, blue for approved, yellow for needs review, and green for completed
+
+16. can you extract all prompts that I gave in this conversation and add to prompts.txt
+
+17. some stupid llm from anthropic made this competencyheader.astro and there's a lot to change about it. first, the contribution should not be a input, it should be a paragraph, second, make the labels and the values all be vertically aligned, (so maybe a flex grid? idk). next, can you abstract the status chip to be its own component and reflect those changes in the competencies page where the chips are used on the cards
+
+18. make the labels in the grid right aligned in their cell
+
+19. what is fr unit
+
+20. dynamically get the status for this mdx file
+
+21. add competency status as the prop in the .mdx file
+
+22. I'm still getting "competencyStatus is not defined" in prototyping.mdx
+
+23. can you extract all prompts that I gave in this conversation and add to prompts.txt
