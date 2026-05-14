@@ -29,4 +29,6 @@ export default defineConfig({
   },
 
   integrations: [react(), mdx()],
+  site: 'https://th4t-gi.github.io',
+  // base: '/project-hi-mom',
 });
