@@ -2,13 +2,14 @@
 import ThemeToggle from './ThemeToggle.tsx';
 
 const currentPath = Astro.url.pathname;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const links = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
+  { href: `${base}/`, label: 'Home' },
+  { href: `${base}/about`, label: 'About' },
   { href: '#', label: 'CV' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/competencies', label: 'Competencies' },
+  { href: `${base}/projects`, label: 'Projects' },
+  { href: `${base}/competencies`, label: 'Competencies' },
 ];
 ---
 

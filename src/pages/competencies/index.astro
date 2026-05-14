@@ -2,6 +2,8 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { competencies, sections } from '../../data/competencies';
 import StatusChip from '../../components/StatusChip.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title="Competencies">
@@ -15,7 +17,7 @@ import StatusChip from '../../components/StatusChip.astro';
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           {items.map((c) => (
             <a
-              href={`/competencies/${c.slug}`}
+              href={`${base}/competencies/${c.slug}`}
               class="relative block border border-border rounded-lg p-6 hover:border-accent hover:bg-surface transition-colors no-underline"
             >
               <StatusChip status={c.status} class="absolute top-3 right-3" />

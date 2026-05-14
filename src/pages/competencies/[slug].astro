@@ -20,12 +20,13 @@ const { name, topic, topic_code, section, description, status } = competencies.f
 const mdxKey = Object.keys(mdxFiles).find((k) => k.endsWith(`/${slug}.mdx`));
 const mdxModule = mdxKey ? (mdxFiles[mdxKey] as any) : null;
 const Content = mdxModule?.Content;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <BaseLayout title={name}>
   <div class="mx-auto max-w-3xl">
     <a
-      href="/competencies"
+      href={`${base}/competencies`}
       class="text-accent hover:underline text-sm mb-6 inline-block"
     >
       &larr; All Competencies
