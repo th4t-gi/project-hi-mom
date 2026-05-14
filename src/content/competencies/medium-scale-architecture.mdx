@@ -1,19 +1,25 @@
 import CompetencyHeader from "../../components/CompetencyHeader.astro";
 
-export const contribution = "hii"
+export const contribution = "I proposed to the team to use Supabase for authentication, and then with their approval, I followed a youtube tutorial to set up Supabase's auth service for login, sign up, and log out. I then used Claude Code to build out a skeleton for an auth state handler (i.e. UserContext)."
+
+
+{/* https://github.com/social-won/grinvites/blob/main/web/src/context/user-context.tsx */}
+{/* https://github.com/social-won/grinvites/blob/main/web/src/lib/supabase.ts */}
 
 <CompetencyHeader status={props.competencyStatus} contribution={contribution}>
   <div slot="sample">
-    my sample
-    {/* <!-- Your image, code, or text content here --> */}
-    {/* <img src="/path/to/image.jpg" alt="Sample" /> */}
+    The `UserContext` and Supabase initialization can be found <a href="https://github.com/social-won/grinvites/blob/main/web/src/context/user-context.tsx">here</a> and <a href="https://github.com/social-won/grinvites/blob/main/web/src/lib/supabase.ts">here</a> respectively.
   </div>
 </CompetencyHeader>
 
 ### What architectural pattern does your program employ?
 
-For user authentication, we implemented a email and password based authentication with [supabase](https://supabase.com), and specifically, I implemented a React Context 
+For user authentication, we implemented a email and password based authentication with [Supabase](https://supabase.com) which under the hood uses a JWT Session architecture to manage auth state.
 
 ### What components result from this pattern in your program?
 
+As mentioned above, the components that result from this pattern are the `SignUpForm` and `LoginForm` forms for creating users and reauthenticating a user, the `ProtectedRoute` component which limits which paths a user can access based on their auth token, and then the `UserProvider` and `useUser()` hook (collectively the `UserContext`) for fetching the current auth state and user data in any given component.
+
 ### What technologies and/or libraries make up each of the components?
+
+The main technology used for the authentication is the Backend-as-a-Service service Supabase, which is able to abstract away all of the security concerns that one would have by rolling their own authentication. All that we had to do was create a supabase project, add some API keys to our `.env`, and voilá!

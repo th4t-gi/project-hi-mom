@@ -1,18 +1,28 @@
 import CompetencyHeader from "../../components/CompetencyHeader.astro";
 
-export const contribution = "hii"
+export const contribution = "Along with everyone else, I had many informal conversations and a handful of formal interviews with friends."
 
 <CompetencyHeader status={props.competencyStatus} contribution={contribution}>
   <div slot="sample">
-    my sample
-    {/* <!-- Your image, code, or text content here --> */}
-    {/* <img src="/path/to/image.jpg" alt="Sample" /> */}
+    Needfinding questions and answers can be found at [this google doc](https://docs.google.com/document/d/1e7Rb9ovlqiQjOyrN_93gbva63WzRdtEEraD2t6YJD_4/edit?usp=sharing).
+
+    Below is the cleaned up notes page of the voice recording transcript on the "Judd Needfinding" tab of the google doc. Since I was talking to 3 people at once (in dhall), I tried to voice transcribe the conversation but it was picking up other conversations and so I stopped after the 1st question.
+    <pre style="white-space: pre-wrap">
+    [name1] uses to-do list for homework and calendar for everything else
+
+    [name2] uses Google calendar for all of their meetings and everything else they keep in their head (e.g. assignments). If it is something they “need to attend, [they] put it down”. 
+
+    [name3] uses Apple calendar for all of my scheduled classes and a lot of various random things that happen every week and then everything else is a mix of in their head as alarms for when they want to do them.
+    </pre>
   </div>
 </CompetencyHeader>
-
-[Needfinding Questions](https://docs.google.com/document/d/1e7Rb9ovlqiQjOyrN_93gbva63WzRdtEEraD2t6YJD_4/edit?usp=sharing)
 
 
 ### What techniques did you employ to discover users' needs?
 
+The first technique we used was analyzing what features and information already exists on digital campus calendars like events.grinnell.edu, the grinnell college instagram story, and 25Live, and we took note of what features we liked and what features we didn't think were beneficial. Next, we interviewed people and asked primarily how people found events on campus, what calendar management system they used, and what they liked/disliked about the already existing tools mentioned previously.
+
+
 ### What did you learn about users' needs from this process?
+
+We learned that students most of the time heard about campus events through word of mouth or on flyers, and did want some sort of central place for this information. Around half of the people I talked to didn't know that events.grinnell.edu already existed, and the other half didn't use it because it was inconvenient to filter/sort. This lead us to ensure that our interface was simple and straightforward to use.

@@ -1,17 +1,61 @@
 import CompetencyHeader from "../../components/CompetencyHeader.astro";
 
-export const contribution = "hii"
+export const contribution = "My contribution to the tutorial presentation was to give the demo of what React is and why it is powerful. I did this in the short amound of time we had by writing out beforehand the necessary chunks of code to include, then pasting each of them in from my notes, explaining what that section does (i.e. state or style modifications) as I did so."
 
 <CompetencyHeader status={props.competencyStatus} contribution={contribution}>
   <div slot="sample">
-    my sample
-    {/* <!-- Your image, code, or text content here --> */}
-    {/* <img src="/path/to/image.jpg" alt="Sample" /> */}
+    <h4 class="text-lg font-semibold text-text mb-2">First 5 steps in my tutorial notes:</h4>
+    <ol>
+      <li>
+        <code>npm create vite@latest demo -- --template react-ts</code>
+          <br/>
+          <code>npm install tailwindcss @tailwindcss/vite</code>
+      </li>
+      <li>
+        In <code className="text-white">vite.config.js</code>, add the `tailwindcss()` plugin.<br />
+        Replace <code>index.css</code> with <code>@import "tailwindcss"</code>
+      </li>
+      <li>Build a functional component in App.tsx with ES6 shortcut `rfce`</li>
+      <li>
+      Create container, button and text
+
+      ```html 
+      <div className="flex justify-center h-screen">
+        <div className="w-1/3 flex flex-col items-center justify-center gap-4">
+              
+        </div>
+      </div>
+
+      <button className="w-full bg-black text-white rounded-md px-4 h-9 hover:opacity-85  active:scale-[.97] transition-opacity cursor-pointer">
+        Let's go Gambling!
+      </button>
+
+      <span className="text-3xl font-bold">Gambles: 0</span>
+      ```
+      </li>
+
+      <li>
+        Add click state (write this out)
+        ```jsx
+        const [count, setCount] = useState(0) 
+        const handleClick = () => {
+            setCount(count + 1);
+        }
+        ```
+      </li>
+    </ol>
   </div>
 </CompetencyHeader>
 
 ### Describe the technology that the tutorial addresses and how it fits into your project.
 
+The tutorial that I gave was on the ReactJS front end framework. In almost any modern large scale web application, the engine behind the user interface is React. This is because of React's Virtual DOM and component architecture allows user interfaces to be built with a focus on state changes as opposed to events and abstracted away the smaller elements in a user interface to better align with the mental model that developers use when building applications. Because of all of these benefits, we used ReactJS with Typescript for the front end of our tech stack.
+
+
 ### Evaluate how useful the tool was in your work. What were its strengths and weaknesses, especially in comparison with other tools you have used?
 
+React is indispensable for our project. Allowing for dynamic state changes and providing a large ecosystem of UI Frameworks (i.e. Card, Button, and Dialog components) simplified both our engineering and design processes. Looking back, our front end is not super heavy or in need of real-time updates, so we probably could've gotten away with a static front-end like NextJS, but a strength of React is that it is highly scalable, so if we want to add some crazy livestreaming feature or something, we have the foundation to do so.
+
 ### Identify one particular sticking point to using this technology that you would want your team to know about when adopting the tool and how you resolved it.
+
+I think one thing that people don't realize when they are new to React is that the components refresh on *every* event that happens, which is why it is very important to use hooks like `useEffect` and `useMemo` to ensure you aren't calling an API every time the mouse moves.

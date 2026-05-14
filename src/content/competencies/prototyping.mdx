@@ -1,10 +1,11 @@
 import CompetencyHeader from "../../components/CompetencyHeader.astro";
 
-export const contribution = "hii"
+export const contribution = "After meeting and coming up with constraints for our prototype as a team and making a quick sketch, before our next class period *I* created a high quality prototype in Goodnotes that we as a team used for evaluation."
 
 <CompetencyHeader status={props.competencyStatus} contribution={contribution}>
   <div slot="sample">
-    my sample
+    The 4 page prototype designed in Goodnotes with user onboarding flow and potential different views of the <code>Hours</code> page. The layouts can also be viewed individually in <a href="https://drive.google.com/drive/folders/1JiOInlEm958P6QBu19CgWXZClNE2s_Mz?usp=drive_link">this google drive</a>.
+    <img src="/prototype.png" />
     {/* <!-- Your image, code, or text content here --> */}
     {/* <img src="/path/to/image.jpg" alt="Sample" /> */}
   </div>
@@ -13,10 +14,12 @@ export const contribution = "hii"
 
 ### What design questions did you intend to answer with your prototype(s)?
 
-Because a large portion of the functionality of our idea was on the backend, the main goal of the prototype was to gauge general interest in the idea and 
+Because a large portion of the functionality of our idea was on the backend, the main goal of the prototype was to gauge what should or shouldn't be included in the user onboarding and home views. Another question we wanted to try and answer was how well and how quickly could someone develop a mental model of our app? We were concerned about this since we weren't sure if users were aware of what email is associated with their calendar and would then correctly understand what we were asking for if we said "Type in your calendar email below."
 
 ### How did you design your prototype(s) and subsequent user studies to address these questions?
 
-
+I designed it with multiple hours views to see if people cared about detailed information (for both the hours page and schedule page) or if the primary use of our app was for quick information (i.e. where and when). Additionally, we were unsure of the onboarding flow structure, and so I intentionally designed each page seperately and played around with the order of the cards when testing it to see the most logical progression from the user's perspective was.
 
 ### What answers to your design questions did your efforts unveil?
+
+Our prototype helped us understand that users did not understand that the email input when signing up can't just be their grinnell email which is what everyone defaulted to. This lead us to having a seperate "Connect your calendar" onboarding page, which we later cut due to technical complexity. Additionally, we learned that users didn't care or understand the importance of when our invites should be sent, making this a lower priority feature for us. Finally, one user  

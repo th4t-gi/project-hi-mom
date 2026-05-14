@@ -1,20 +1,29 @@
 import CompetencyHeader from "../../components/CompetencyHeader.astro";
 
-export const contribution = "hii"
+export const contribution = "I remember one of the first days that we were brainstorming projects as a class, like many groups before us, Owen asked me if some sort of product surrounding campus events or a campus calendar would be a good idea to build. I immediately thought that was a good decision and was onboard. So much so that I think I suggested it as a group when we were initially brainstorming. Over the next week or so, I became more and more hesitant because I saw more and more the attempts and fails at trying to consolidate this area of campus life. I then persuaded the group that we could do it, which motivated us even more to figure out an original solution in this space."
 
 <CompetencyHeader status={props.competencyStatus} contribution={contribution}>
   <div slot="sample">
-    my sample
-    {/* <!-- Your image, code, or text content here --> */}
-    {/* <img src="/path/to/image.jpg" alt="Sample" /> */}
+    Our initial feature brainstorming can be found in <a href="https://docs.google.com/document/d/1Fm_pdkO9_8vNr6KZijmISizzLUZu5xF6bz0lKRVNOfk/edit?usp=sharing">this google doc</a> and our personas are outlined in <a href="https://docs.google.com/document/d/19w52fWpX0t3wEKdNL1VvrdkxwhNqq37A8vfWK1ECwt0/edit?usp=sharing">this google doc</a>.
+
+    Below is a notes page that I took when interviewing people. We had a much longer conversation that this but it was in Dhall and I stopped taking notes half way through.
+    <pre style="white-space: pre-wrap">
+    [name1] uses to-do list for homework and calendar for everything else
+
+[name2] uses Google calendar for all of their meetings and everything else they keep in their head (e.g. assignments). If it is something they “need to attend, [they] put it down”. 
+
+[name3] uses Apple calendar for all of my scheduled classes and a lot of various random things that happen every week and then everything else is a mix of in their head as alarms for when they want to do them.
+    </pre>
+
   </div>
 </CompetencyHeader>
-
-## 
-
-I remember one of the first days that we were brainstorming projects as a class, like so many people during lecture Owen asked me 
 
 
 ### What techniques did you use to discover solutions to users' needs?
 
+The primary technique that we used to figure out users' needs was through interviews asking how people found events on campus, what calendar management system they used, etc. Another technique that we used was analyzing what places/tools are already in place for campus events. These included events.grinnell.edu, old fashioned bulletin boards, and the grinnell college instagram story to name a few. 
+
+
 ### What solution(s) did you ultimate pursue and why did you choose them?
+
+Ultimately, we decided to pursue a system that is as automated and as little work from the user's perspective as possible because of the already crowded space we were going into. Grant I believe had an idea of integrating the grinnell events directly into people's digital calendars since so many people use Google or Apple calendar, which fit our constrait of a seemless user experience. So the only input that we would need from the user is what events do they want to hear about and when.

@@ -51,7 +51,7 @@ export const competencies: Competency[] = [
     preview: "",
     topic: "Authentication and UserContext",
     // topic_code: true,
-    status: "Approved For"
+    status: "Needs Review"
   },
   {
     slug: 'testing-strategies',
@@ -64,7 +64,7 @@ export const competencies: Competency[] = [
       'For code that is not covered by tests, why did you not cover them?',
     ],
     preview: "",
-    status: "TODO"
+    status: "Approved For"
   },
   {
     slug: 'testing-infrastructure',
@@ -77,7 +77,7 @@ export const competencies: Competency[] = [
       'Describe a specific occurrence in which your testing infrastructure saved you and/or your team work.',
     ],
     preview: "",
-    status: "TODO"
+    status: "Approved For"
   },
   {
     slug: 'needfinding',
@@ -90,7 +90,7 @@ export const competencies: Competency[] = [
       'What did you learn about users\' needs from this process?',
     ],
     preview: "",
-    status: "Approved For"
+    status: "Needs Review"
   },
   {
     slug: 'ideation',
@@ -103,7 +103,7 @@ export const competencies: Competency[] = [
       'What solution(s) did you ultimate pursue and why did you choose them?',
     ],
     preview: "",
-    status: "Approved For"
+    status: "Needs Review"
   },
   {
     slug: 'prototyping',
@@ -117,7 +117,7 @@ export const competencies: Competency[] = [
       'What answers to your design questions did your efforts unveil?',
     ],
     preview: "",
-    status: "Approved For"
+    status: "Needs Review"
   },
   {
     slug: 'evaluation',
@@ -158,7 +158,7 @@ export const competencies: Competency[] = [
       'Identify one particular sticking point to using this technology that you would want your team to know about when adopting the tool and how you resolved it.',
     ],
     preview: "",
-    status: "Approved For"
+    status: "Needs Review"
   },
   {
     slug: 'process',
@@ -199,7 +199,7 @@ export const competencies: Competency[] = [
       'What alternative designs did you consider (describe at least one) and why did the current design prevail, appealing to the principles of interaction design?',
     ],
     preview: "",
-    status: "TODO"
+    status: "Approved For"
   },
   // {
   //   slug: 'accessible-design',
