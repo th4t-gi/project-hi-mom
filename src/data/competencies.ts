@@ -187,7 +187,7 @@ export const competencies: Competency[] = [
       'Did you encounter any difficulties in collaboration with your team during these instances? If so, how did you resolve those difficulties?',
     ],
     preview: "",
-    status: "TODO"
+    status: "Needs Review"
   },
   {
     slug: 'user-interface-design',
@@ -200,7 +200,7 @@ export const competencies: Competency[] = [
       'What alternative designs did you consider (describe at least one) and why did the current design prevail, appealing to the principles of interaction design?',
     ],
     preview: "",
-    status: "Approved For"
+    status: "Needs Review"
   },
   // {
   //   slug: 'accessible-design',

@@ -1,15 +1,26 @@
 import CompetencyHeader from "../../components/CompetencyHeader.astro";
 
-export const contribution = "hii"
+export const contribution = "I was the primary developer for the user onboarding/sign up expereince."
+export const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 <CompetencyHeader status={props.competencyStatus} contribution={contribution}>
   <div slot="sample">
-    my sample
-    {/* <!-- Your image, code, or text content here --> */}
-    {/* <img src="/path/to/image.jpg" alt="Sample" /> */}
+    Screenshots of the first two steps of the onboarding flow. Code can be found in <a href="https://github.com/social-won/grinvites/blob/5-8-presentation/web/src/components/onboarding-flow.tsx">this file</a>.
+
+    <img src={`${base}/adv-design-1.png`} />
+    <img src={`${base}/adv-design-2.png`} />
   </div>
 </CompetencyHeader>
 
 ### How does your design adhere to one or more of the principles of interaction design?
 
+Because the whole point of any onboarding is to limit the user's actions to only those requested by the application, the onboarding flow as seen from the first two steps above direct users attention to the key action items through spacing, color, text hierarchy, and memory indicators. For example, across the top bar is 4 circles that indicate the user's progress through the onboarding, with a number indicating the current step and a checkmark if they have completed the step. The steps they have not completed yet, are grey and are not clickable, communicating that they have to complete some item currently on the screen before they can get there.
+
+The horizontal spacer between the bottom navigation buttons and card content is key to communicating that these buttons are seperate from the current task at hand, and the fact that the "Back" and "Next" buttons they are justified to opposite sides signals that they are opposing actions.
+
+
 ### What alternative designs did you consider (describe at least one) and why did the current design prevail, appealing to the principles of interaction design?
+
+We initially thought about all of the interests in one long list that was searchable, instead of the hierarchical dropdown/list combination that we have currently, simply for ease of implementation. It is much more difficult to organize and display the list of interests by group than it is to just iterate over what the scraper finds. This took some engineering prowess by finding the \~500 possible organization names in 25Live, and then creating a seperate static data structure that lists the possible groups it could be under. 
+
+This current design is much better because it gives the user a starting point -- A list of 9 different categories -- to choose from, narrowing the focus to between 5 and 40 options in each category after a click. This means that the user doesn't have to know exactly what they want to select (the search functionality) and won't be overwhelmed by scrolling through everything.

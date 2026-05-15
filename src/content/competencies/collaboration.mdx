@@ -1,17 +1,47 @@
 import CompetencyHeader from "../../components/CompetencyHeader.astro";
 
-export const contribution = "hii"
+export const contribution = "See sample."
+export const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 <CompetencyHeader status={props.competencyStatus} contribution={contribution}>
   <div slot="sample">
-    my sample
-    {/* <!-- Your image, code, or text content here --> */}
-    {/* <img src="/path/to/image.jpg" alt="Sample" /> */}
+    <ol>
+      <li>
+        On 3/23, we were hesisant if we needed to meet but I convinced everyone we should, and then we met for an hour and were finally able to sketch out the architecture of our app.
+        <img src={`${base}/collaboration.png`} />
+      </li>
+      <li> 
+        Issue <a href="https://github.com/social-won/grinvites/issues/39">#39</a> I noticed and then created.
+      </li>
+      <li> 
+        Pull request <a href="https://github.com/social-won/grinvites/pull/29">#29</a> I opened and then Grant reviewed.
+      </li>
+      <li> 
+        Pull request <a href="https://github.com/social-won/grinvites/pull/34">#34</a> was opened by Grant and then I reviewed.
+      </li>
+    </ol>
   </div>
 </CompetencyHeader>
 
+
+
 ### Identify the work you did in each of these instances.
+
+1. According to my work log, we met in the HSSC for 1 hour and discussed the highest level components that needed to be created, and what integrations the needed with eachother. I have always been a fan of vertical writing surfaces to talk out ideas, so after about 10 minutes of everyone talking over eachother, I got up and started drawing what I was invisioning. We then all built on this until we had something we were happy with.
+2. This issue was a subtle one that only really exists because of the stupidity of 25Live. I was finishing the interest option selection and noticed when I searched for specific org names, there were multiple instances, but they had a ", commencement" after it. This made me realize that we were creating unnecessary duplicate organization names.
+3. After creating a pull request and closing the associated issue ([#23](https://github.com/social-won/grinvites/issues/23)), I assigned Grant to review the code.
+4. After Grant opened the pull request with major changes to the mail server, I painstakingly combed through all 684 lines of code that Grant wrote to ensure that it was in line with our security, style, and engineering standards. 
 
 ### Describe the difficulties that necessitated communication with your peers in each instance.
 
+1. The primary difficulty that required this meeting was just the fact that we attempted to build a very complex system. Since we all had different visions of the specifications for said system, meant that if we hadn't had this project, we would all be building something slightly different that couldn't communicate with eachother.
+2. The issue in this instance was that this behavior happened infrequently enough that in Jafar's testing of the scraper, he didn't come across any event with this bug, and so he wasn't even aware of it. 
+3. The communication with this PR was necessary because this was still during the time where we weren't sure if we were going to use grinnell emails to authenticate or their calendar email to authenticate and it was good for grant to see why having the seperate emails would be difficult technically.
+4. The difficulty that required me doing this code review was so that there was someone else other than Grant who understood the Mail server, since he had been the only team member working on this for the time before that.
+
 ### Did you encounter any difficulties in collaboration with your team during these instances? If so, how did you resolve those difficulties?
+
+1. The first difficulty in this instance was actually meeting in the first place. As I mentioned above, that morning in class we basically asked if it was necessary for us to meet, or if we could just meet next class period, but I argued that if we didn't lock ourselves in a room until we figured out our architecture, it was never going to happen.
+2. I think talking in person about the issue, I mentioned that we would need to check if a organization actually
+3. Other than the difficulty mentioned above, I did not have have any difficulties collaborating.
+4. Nope!
