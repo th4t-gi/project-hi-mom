@@ -1,17 +1,24 @@
 import CompetencyHeader from "../../components/CompetencyHeader.astro";
 
-export const contribution = "hii"
+export const contribution = "As mentioned in prototyping, I created the design of the paper prototype, and subsequently conducted informal assessements of said prototype in with friends."
+export const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 <CompetencyHeader status={props.competencyStatus} contribution={contribution}>
   <div slot="sample">
-    my sample
-    {/* <!-- Your image, code, or text content here --> */}
-    {/* <img src="/path/to/image.jpg" alt="Sample" /> */}
+    See the <a href={`${base}/prototyping`}>prototype sample</a> and <a href="https://docs.google.com/document/d/117JyhSBu_EP2JeMWRSLSvm24fV1AVD3HdXLqNOh42Ac/edit?usp=sharing">this evaluation document</a> made by Jafar.
   </div>
 </CompetencyHeader>
 
 ### What was the design of your user study to evaluate your artifact?
 
+The design of our study was to present the signup/onboarding flow to our participants after giving an elevator pitch for our app, simulating the environment that would occur if someone had just been told about our app and wanted to sign up. We did this because the onboarding is the most crucial user experience in Grinvites, with the goal being minimal usage of the app after that. We wanted to see what possible places people might get stuck in the process and therefore not complete the full signup.
+
+Later on, after we had completed our MVP, Jafar and I conducted a second assessement with two potential users to see what possible features a user would expect Grinvites to have -- letting the user's expectations and needs dictate our development. The results of this study can be found in the evaluation document above.
+
 ### What were the results of this user study?
 
+After testing this with multiple friends each, we concluded that having a seperate email for login and the calendar connection was too confusing. This distiction was the main spot that users got tripped up, which led to either incorrect understandings of the system, or canceled signups all together.
+
 ### What were the main points of future development that you took away from this activity?
+
+The main goals we took away from this study was that we should only have users associate one email with grinvites instead of a institutional email and calendar email (which might actually be one in the same). This is kindof a no-brainer, since there is no product anywhere that actively asks for two seperate emails from a user for different purposes.

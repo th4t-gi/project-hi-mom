@@ -35,7 +35,7 @@ export const competencies: Competency[] = [
     preview: "",
     // topic: "",
     // topic_code: true,
-    status: "TODO"
+    status: "Needs Review"
   },
   {
     slug: 'medium-scale-architecture',
@@ -49,9 +49,10 @@ export const competencies: Competency[] = [
       'What technologies and/or libraries make up each of the components?',
     ],
     preview: "",
-    topic: "Authentication and UserContext",
+    topic: "",
+    // topic: "Authentication and UserContext",
     // topic_code: true,
-    status: "Needs Review"
+    status: "Completed"
   },
   {
     slug: 'testing-strategies',
@@ -64,7 +65,7 @@ export const competencies: Competency[] = [
       'For code that is not covered by tests, why did you not cover them?',
     ],
     preview: "",
-    status: "Approved For"
+    status: "Needs Review"
   },
   {
     slug: 'testing-infrastructure',
@@ -90,7 +91,7 @@ export const competencies: Competency[] = [
       'What did you learn about users\' needs from this process?',
     ],
     preview: "",
-    status: "Needs Review"
+    status: "Completed"
   },
   {
     slug: 'ideation',
@@ -103,7 +104,7 @@ export const competencies: Competency[] = [
       'What solution(s) did you ultimate pursue and why did you choose them?',
     ],
     preview: "",
-    status: "Needs Review"
+    status: "Completed"
   },
   {
     slug: 'prototyping',
@@ -117,7 +118,7 @@ export const competencies: Competency[] = [
       'What answers to your design questions did your efforts unveil?',
     ],
     preview: "",
-    status: "Needs Review"
+    status: "Completed"
   },
   {
     slug: 'evaluation',
@@ -131,7 +132,7 @@ export const competencies: Competency[] = [
       'What were the main points of future development that you took away from this activity?',
     ],
     preview: "",
-    status: "Approved For"
+    status: "Needs Review"
   },
   {
     slug: 'infrastructure',

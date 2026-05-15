@@ -1,19 +1,23 @@
 import CompetencyHeader from "../../components/CompetencyHeader.astro";
 
-export const contribution = "hii"
+export const contribution = "I leaned on Claude Code for a large portion of the initial implementation. I then went in and fixed the many small things that Claude either got wrong or doesn't understand because it doesn't have eyes including making the wrong api calls, not truncating long event titles or descriptions, or using the creation timestamp instead of the end timestamp."
 
 
-add a event view component that has multiple different forms and is callen the home page,  
 <CompetencyHeader status={props.competencyStatus} contribution={contribution}>
   <div slot="sample">
-    my sample
-    {/* <!-- Your image, code, or text content here --> */}
-    {/* <img src="/path/to/image.jpg" alt="Sample" /> */}
+    The primary commit for this feature is <a href="https://github.com/social-won/grinvites/commit/02f8533f37a0e17652ddf9ac38e3e7761afb7eb0"> this one</a>.
   </div>
 </CompetencyHeader>
 
 ### What functionality does your code sample abstract away?
 
+This feature abstracts away an event carousel component which is used on the landing page to display all events (in the future, featured events) and on a user's home page, all the events that they have signaled interest in, and allows different views of these events.
+
 ### How does it mechanically achieve abstraction?
 
+The `ScheduleView` componenet abstracts away the various layouts of an event into the `EventCard` component. Then based on the view that the implementation requires (i.e. "simple" or "detailed" or "calendar view"), displays the `EventCard` component with the required alterations.
+
 ### What purpose does this abstraction serve in your larger program?
+
+The purpose was to be able to display a list of upcoming events for different contexts, without having to duplicate code that is shared across those contexts like the standard layout we have for eac event.
+

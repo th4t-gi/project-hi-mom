@@ -1,15 +1,17 @@
 import CompetencyHeader from "../../components/CompetencyHeader.astro";
 
-export const contribution = "hii"
+export const contribution = "I used Claude Code to help set up the vitest.global-setup.ts to be able to mock the Supabase authentication."
 
 <CompetencyHeader status={props.competencyStatus} contribution={contribution}>
   <div slot="sample">
-    my sample
-    {/* <!-- Your image, code, or text content here --> */}
-    {/* <img src="/path/to/image.jpg" alt="Sample" /> */}
+    The primary file talked about in this competency is <a href="https://github.com/social-won/grinvites/blob/main/web/src/lib/api.test.ts">api.test.ts</a> which was created in <a href="https://github.com/social-won/grinvites/commit/749542423980ce6bbbe5ca4436e6c1338210fa8f">this commit</a>.
   </div>
 </CompetencyHeader>
 
 ### What kinds of tests are they?
 
+These tests are testing both the front end API functionality, that we are parsing the REST JSON correctly, and also that all steps that need to be completed on the backend when an api endpoint is touched are executing correctly as well. When `npm test` is ran, we spin up the backend with a `E2E_TESTING` environment variable flag which creates a temperary test SQLite database to run our tests.
+
 ### For code that is not covered by tests, why did you not cover them?
+
+The only part of the API pipeline that isn't covered with these test is simulating the "Sign up" button press that calls `createUser` for example. This was not covered mainly because to test this would require setting up some sort of automated web interaction pipeline with Playright which was too labor intensive for the marginal coverage it would've given us.

@@ -1,11 +1,12 @@
 import CompetencyHeader from "../../components/CompetencyHeader.astro";
 
 export const contribution = "After meeting and coming up with constraints for our prototype as a team and making a quick sketch, before our next class period *I* created a high quality prototype in Goodnotes that we as a team used for evaluation."
+export const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 <CompetencyHeader status={props.competencyStatus} contribution={contribution}>
   <div slot="sample">
     The 4 page prototype designed in Goodnotes with user onboarding flow and potential different views of the <code>Hours</code> page. The layouts can also be viewed individually in <a href="https://drive.google.com/drive/folders/1JiOInlEm958P6QBu19CgWXZClNE2s_Mz?usp=drive_link">this google drive</a>.
-    <img src="/prototype.png" />
+    <img src={`${base}/prototype.png`} />
     {/* <!-- Your image, code, or text content here --> */}
     {/* <img src="/path/to/image.jpg" alt="Sample" /> */}
   </div>
@@ -22,4 +23,4 @@ I designed it with multiple hours views to see if people cared about detailed in
 
 ### What answers to your design questions did your efforts unveil?
 
-Our prototype helped us understand that users did not understand that the email input when signing up can't just be their grinnell email which is what everyone defaulted to. This lead us to having a seperate "Connect your calendar" onboarding page, which we later cut due to technical complexity. Additionally, we learned that users didn't care or understand the importance of when our invites should be sent, making this a lower priority feature for us. Finally, one user  
+Our prototype helped us understand that users did not understand that the email input when signing up can't just be their grinnell email which is what everyone defaulted to. This lead us to having a seperate "Connect your calendar" onboarding page, which we later cut due to technical complexity. Additionally, we learned that users didn't care or understand the importance of when our invites should be sent, making this a lower priority feature for us. Finally, one user made the suggestion to have events in the schedule page have a one-click "add to my calendar" page that would improve upon other products "add to calendar" feature since our app is already integrated to the user's calendar whereas other calendars make you download an ics file when you click "add to calendar".
