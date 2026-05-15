@@ -1,21 +1,26 @@
 import CompetencyHeader from "../../components/CompetencyHeader.astro";
 
-export const contribution = "hii"
+export const contribution = "Owen and I met on 5/13 and wrote the tests pair programming style."
 
 <CompetencyHeader status={props.competencyStatus} contribution={contribution}>
   <div slot="sample">
-    my sample
-    {/* <!-- Your image, code, or text content here --> */}
-    {/* <img src="/path/to/image.jpg" alt="Sample" /> */}
+    The main sample for the mock DB testing is <a href="https://github.com/social-won/grinvites/commit/fee11a6d0e53d95d9126930ea6f4077a435cbf66">this commit</a>.
   </div>
 </CompetencyHeader>
 
-mock database testing
 
 ### What advanced testing tool or technology did you employ in your code?
 
+We employed mock object testing for our database/backend so that we weren't initializing or making any actual database calls that could potentially screw up actual data.
+
 ### What did this tool/technology validate in your program?
+
+Mock objects was able to allow us to verify that the backend/database function calls were correct without having to set up the actual infrastructure that our application needs in production.
 
 ### How effective was it in this task?
 
+It was alright. It did mean that when we needed to change the implementation some how, we would have to make sure to reflect those changes in the mock testing as well.
+
 ### In what contexts did you envision yourself utilizing this tool/technology in the future?
+
+I think mock objects are extremely useful when there is some external dependancy that you rely on for your tests (and therefore your code) to run and you know exactly what you should expect from those dependancies in your test cases. Because of this, I will certainly use them in the future if I find myself in this situation that I just described.

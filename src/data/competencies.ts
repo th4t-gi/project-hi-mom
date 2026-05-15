@@ -227,7 +227,7 @@ export const competencies: Competency[] = [
       'In what contexts did you envision yourself utilizing this tool/technology in the future?',
     ],
     preview: "",
-    status: "TODO"
+    status: "Needs Review"
   },
   {
     slug: 'quality',
@@ -240,6 +240,6 @@ export const competencies: Competency[] = [
       'In what ways does it fall short? How would you have addressed these issues if given more time?',
     ],
     preview: "",
-    status: "TODO"
+    status: "Needs Review"
   },
 ];

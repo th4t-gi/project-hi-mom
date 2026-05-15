@@ -1,15 +1,19 @@
 import CompetencyHeader from "../../components/CompetencyHeader.astro";
 
-export const contribution = "hii"
+export const contribution = "I feel like I've alluded to this in other competencies but I should be explicit about it in this one. I certainly feel as though I have been the person on our team who has a) spent the most time integrating all components and communicating with everyone on their seperate parts. Before the internal presentation, I stayed up with Grant to get the mail server running and communicating with the back end. I lead the development of the API we created and what the endpoints for that should look like, collaborating closely with Owen in the process. And I worked with Jafar on multiple occasions to debug some change in the backend that made the scraper crash."
 
 <CompetencyHeader status={props.competencyStatus} contribution={contribution}>
-  <div slot="sample">
+  {/* <div slot="sample">
     my sample
-    {/* <!-- Your image, code, or text content here --> */}
-    {/* <img src="/path/to/image.jpg" alt="Sample" /> */}
-  </div>
+    <!-- Your image, code, or text content here -->
+    <img src="/path/to/image.jpg" alt="Sample" />
+  </div> */} 
 </CompetencyHeader>
 
 ### In what ways does your codebase exemplify engineering excellence? Be as exhaustive as possible in your analysis.
 
+I think considering that we have written \~7,500 lines of code in the past two months (\~5,000 not including the UI components from shadcn/ui), and we have maintained an organized file structure and compartmentalized functionality into python modules and React components, is one way that our codebase is worthy of the label "quality". Additionally, for most of our backend functionality, we have added documentation strings and comments in our code, which allows our codebase to in theory be maintainable in our absence as well -- a marker of a quality codebase.
+
 ### In what ways does it fall short? How would you have addressed these issues if given more time?
+
+I think because of the initial split in our codebase (i.e. a `web/` and `server/` directories), this made a lot of style and documentation habits be split as well, which has led to inconsistency across the whole codebase. I think that if I am to continue working on this project, I would try and close this gap by writting a style guidlines sheet that would sit in the root of the repository and try and unify how we style things between the front and back ends.
