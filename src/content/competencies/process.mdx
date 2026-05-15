@@ -1,17 +1,22 @@
 import CompetencyHeader from "../../components/CompetencyHeader.astro";
 
-export const contribution = "hii"
+export const contribution = "I very much tried to maintain an organized github as kindof the 'second brain' of our group (i.e. feature ideas as issues and branches of what we are currently working on), but when we were seeing eachother daily and texting about issues, it made communication through github kindof moot."
 
 <CompetencyHeader status={props.competencyStatus} contribution={contribution}>
   <div slot="sample">
-    my sample
-    {/* <!-- Your image, code, or text content here --> */}
-    {/* <img src="/path/to/image.jpg" alt="Sample" /> */}
+    While it felt like my teammates were using github less and less as the semester went on, I started to see the benefits of issues and the kanban board even more since we actually had a codebase to govern:
+    <a href="https://github.com/social-won/grinvites/issues?q=is%3Aissue">https://github.com/social-won/grinvites/issues?q=is%3Aissue</a>
   </div>
 </CompetencyHeader>
 
 ### What software engineering practices did your group employ to manage, distribute, and execute on their work?
 
+I would say that a positive practice that we maintained throughout the semester was developing on seperate branches, and then pulling into main whenever those were complete. As we got the hang of it, this meant that if Grant was half way done with a feature, but he had a fix that I really needed, I could pull the commits from his branch onto mine with ease. Other than branching, we attempted to implement code reviews in pairs by assigning people to pull requests, but this didn't really pan out as I'll discuss below.
+
 ### In your estimation, how well did your group follow through on using these processes throughout the semester?
 
+As mentioned above, I think collectively our git skills improved immensely throughout the semester, therefore improving the overall commit hygene of our project. As for code reviews or other bureaucratic processes that are important software development practices like code reviews and sprinting, these kindof -- how do I say this kindly -- fell off of a cliff once april hit and we were just trying to get an MVP up and working.
+
 ### What, if anything, got in the way of integrating these processes into your workflow?
+
+The main obstacle of integrating stand-up meetings, code reivews, and other practices that ended up falling by the wayside in my opinion I think is simply the fact that we aren't doing this full time and that all of the other chaotic responsibilities of being a student make the intentional systems that good software development requires unrealistic to implement. For example, this led to sprints happening on a when-needed basis as opposed to in managable cycles. Part of this is the fact that we were creating a whole new code base and not adding features/bugfixes to an existing one. But another part is just the fact that if a big midterm happens to land on the same day that the sprint is theoretically over, if I'm not being graded on what I did/didn't complete that sprint, I'm going to prioritize my other class that day.

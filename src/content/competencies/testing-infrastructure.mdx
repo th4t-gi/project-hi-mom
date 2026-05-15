@@ -1,17 +1,20 @@
 import CompetencyHeader from "../../components/CompetencyHeader.astro";
 
-export const contribution = "hii"
+export const contribution = "I created a makefile to run all backend and frontend tests at once, and then thanks to a suggestion from PM, I found a VSCode extension that allowed to run tests from the IDE."
+export const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 
-look for testing extension to run from ide?
 <CompetencyHeader status={props.competencyStatus} contribution={contribution}>
   <div slot="sample">
-    my sample
-    {/* <!-- Your image, code, or text content here --> */}
-    {/* <img src="/path/to/image.jpg" alt="Sample" /> */}
+    I installed the <a href="https://marketplace.visualstudio.com/items?itemName=vitest.explorer">Vitest VSCode extension</a> and <a href="https://marketplace.visualstudio.com/items?itemName=LittleFoxTeam.vscode-python-test-adapter">Python testing extension</a> so that I could run individual tests or whole suites from the IDE like so:
+    <img src={`${base}/testing-infrastructure.png`} />
   </div>
 </CompetencyHeader>
 
 ### How have you automated your tests so that they both take "1-click" to run and run automatically as part of build validation?
 
+Initially, I made a `make test` macro in our makefile that ran the frontend and backend tests all at once which was pretty nice.
+
 ### Describe a specific occurrence in which your testing infrastructure saved you and/or your team work.
+
+I remember this was the morning of the external presentations, we were updating some integration between the mail server and the backend, and since we didn't really have time (or email tokens) to verify that our changes didn't crash the server, the way that I gained confidence that what we did was correct was by running our test suite from the makefile.

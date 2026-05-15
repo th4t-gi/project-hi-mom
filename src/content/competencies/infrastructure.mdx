@@ -1,15 +1,19 @@
 import CompetencyHeader from "../../components/CompetencyHeader.astro";
 
-export const contribution = "hii"
+export const contribution = "I hit \"option-cmd-j\" in my browser many many times."
+export const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 <CompetencyHeader status={props.competencyStatus} contribution={contribution}>
   <div slot="sample">
-    my sample
-    {/* <!-- Your image, code, or text content here --> */}
-    {/* <img src="/path/to/image.jpg" alt="Sample" /> */}
+    A screenshot of verifying the response of an API call in the network tab:
+    <img src={`${base}/infrastructure.png`} alt="A screenshot of verifying the response of an API call in the network tab." />
   </div>
 </CompetencyHeader>
 
 ### What development tools did you use through the process to help write code and automate the build/deployment process?
 
+The primary tool that I used through the development process was the Javascript Console and Networking tab in my browser while in local development. The primary use of the JS Console was printing out debug messages when the order of certain events was happening out of order. I also used it frequently to inspect the default padding/margin for UI components to either override them or make some element I was working on be consistent with the rest of the UI.
+
 ### What is one specific problem (e.g., debugging an issue) that you encountered while writing code and how did your tools help or hinder your ability to address that problem?
+
+I remember when creating the `ScheduleView` component, for some reason the creation date was being displayed as the endtime for *every* event, which I thought was weird and thought must be coming from just putting the wrong date field in the `EventCard` component. This wasn't the case and when I looked closer I saw that there were other fields being displayed that didn't line up either like where the description should be was the event id for some reason. I solved this problem by looking at what the api was returning in the browser (since we were getting information, just the wrong info), and it turns out that the `/users/{user_id}/events` endpoint was shuffling the keys of the returned object around! I then went back to the backend and found that endpoint was using a hardcoded list of column names that was out of date, and so the order of the values being pulled from the database didn't match up whatsoever.

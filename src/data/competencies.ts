@@ -78,7 +78,7 @@ export const competencies: Competency[] = [
       'Describe a specific occurrence in which your testing infrastructure saved you and/or your team work.',
     ],
     preview: "",
-    status: "Approved For"
+    status: "Needs Review"
   },
   {
     slug: 'needfinding',
@@ -145,7 +145,7 @@ export const competencies: Competency[] = [
       'What is one specific problem (e.g., debugging an issue) that you encountered while writing code and how did your tools help or hinder your ability to address that problem?',
     ],
     preview: "",
-    status: "TODO"
+    status: "Needs Review"
   },
   {
     slug: 'self-learning',
@@ -173,7 +173,7 @@ export const competencies: Competency[] = [
       'What, if anything, got in the way of integrating these processes into your workflow?',
     ],
     preview: "",
-    status: "Approved For"
+    status: "Needs Review"
   },
   {
     slug: 'collaboration',
